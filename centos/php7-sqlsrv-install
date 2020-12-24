@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# This bash script will install in your CentOS distribution (or in any linux distribution actually) 
+# the required drivers to connect your php application with a MS Sql Server database.
+# aka the sqlsrv and the pdo_sqlsrv drivers.
+
+sudo su
+  curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+  ACCEPT_EULA=Y yum install msodbcsql
+  yum install unixODBC-devel
+  yum groupinstall "Development Tools"
+  yum install php-pear
+  yum install dnf-plugins-core
+  yum config-manager --set-enabled powertools
+  yum install php-devel
+  pecl install sqlsrv pdo_sqlsrv
+  echo "extension=/usr/lib64/php/modules/sqlsrv.so" >> /etc/php.d/pdo.ini
+  echo "extension=/usr/lib64/php/modules/pdo_sqlsrv.so" >> /etc/php.d/pdo.ini
+exit
