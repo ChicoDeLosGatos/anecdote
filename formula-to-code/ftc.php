@@ -1,4 +1,3 @@
-/*
 ###########################################################################################################
 #                                                                                                         #
 #   Author: ChicoDeLosGatos                                                                               #
@@ -22,7 +21,7 @@
 #   an `if` substring, because that would cause a malfunction of the code. It's a known bug.              #
 #                                                                                                         #
 ###########################################################################################################
-*/
+
 
 public function parseExpr(String $str){
 		$tmp = '';
