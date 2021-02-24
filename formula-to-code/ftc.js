@@ -10,8 +10,8 @@
 #   javascript. For exemple:                                                                              #
 #                                                                                                         #
 #   var a = 2.4; var b = 4.2; var c = (a+b)*100+6;                                                        #
-#   var formula = `if(${a}>${b}, if(${a}>2*${b}, "A is too large", "A is larger"),if(${c}==666,           #
-#    "Oh no! A demon!", "B is larger))`;                                                                  #
+#   var formula = `if(${a}>${b}, if(${a}>2*${b}, 'A is too large', 'A is larger'),if(${c}==666,           #
+#    'Oh no! A demon!', 'B is larger'))`;                                                                  #
 #                                                                                                         #
 #   parseExpr(formula) ->                                                                                 #
 #   (2.4>4.2)?((2.4>2*4.2)?'A is too large':'A is larger'):((666==666)?'Oh no! A demon!':'B is larger')   #
